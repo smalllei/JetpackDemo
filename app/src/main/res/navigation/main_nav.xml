@@ -25,11 +25,7 @@
         tools:layout="@layout/news_fragment">
         <action
             android:id="@+id/next_action"
-            app:destination="@+id/settings_fragment"
-            app:enterAnim="@anim/nav_default_pop_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:destination="@+id/settings_fragment" />
     </fragment>
     <fragment
         android:id="@+id/settings_fragment"
@@ -38,10 +34,9 @@
         tools:layout="@layout/settings_fragment">
         <action
             android:id="@+id/next_action"
-            app:popUpTo="@+id/home_fragment"
-            app:enterAnim="@anim/nav_default_pop_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:popUpTo="@+id/home_fragment" />
+        <deepLink
+            android:autoVerify="true"
+            app:uri="jetpackdemo://fragment/SettingsFragment" />
     </fragment>
 </navigation>
