@@ -5,10 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.smalllei.jetpackdemo.R
+import com.smalllei.jetpackdemo.databinding.LoginFragmentBinding
+import com.smalllei.jetpackdemo.databindingmodel.LoginModel
 
 
 /**
@@ -30,6 +33,8 @@ class LoginFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val dataBinding = DataBindingUtil.bind<LoginFragmentBinding>(view)
+        dataBinding?.model = LoginModel("","",activity!!)
         val option= navOptions {
             anim {
                 enter = R.anim.nav_default_enter_anim
@@ -39,6 +44,7 @@ class LoginFragment : Fragment(){
             }
 
         }
+
 
     }
 

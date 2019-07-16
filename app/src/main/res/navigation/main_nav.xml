@@ -47,4 +47,14 @@
             android:autoVerify="true"
             app:uri="jetpackdemo://fragment/AboutUsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.smalllei.jetpackdemo.fragment.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/login_fragment">
+
+        <deepLink
+            android:autoVerify="true"
+            app:uri="jetpackdemo://fragment/LoginFragment" />
+    </fragment>
 </navigation>

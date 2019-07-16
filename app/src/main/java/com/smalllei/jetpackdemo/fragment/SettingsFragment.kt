@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.smalllei.jetpackdemo.R
 
 
@@ -30,9 +31,10 @@ class SettingsFragment : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<TextView>(R.id.settings_tv_name).setOnClickListener {
-            val args = Bundle()
-            args.putString("from","NewsFragment")
-            Navigation.createNavigateOnClickListener(R.id.next_action)
+//            val args = Bundle()
+//            args.putString("from","NewsFragment")
+//            Navigation.createNavigateOnClickListener(R.id.next_action)
+            findNavController().navigate(R.id.login_fragment)
         }
     }
 
