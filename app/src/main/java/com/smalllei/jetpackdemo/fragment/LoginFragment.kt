@@ -12,6 +12,7 @@ import androidx.navigation.navOptions
 import com.smalllei.jetpackdemo.R
 import com.smalllei.jetpackdemo.databinding.LoginFragmentBinding
 import com.smalllei.jetpackdemo.databindingmodel.LoginModel
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 /**
@@ -28,13 +29,15 @@ class LoginFragment : Fragment(){
         savedInstanceState: Bundle?
     ): View? {
         setHasOptionsMenu(true)
+        setMenuVisibility(false)
         return inflater.inflate(R.layout.login_fragment,container,false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val dataBinding = DataBindingUtil.bind<LoginFragmentBinding>(view)
-        dataBinding?.model = LoginModel("","",activity!!)
+        dataBinding?.model = LoginModel("Bob","****",activity!!)
+
         val option= navOptions {
             anim {
                 enter = R.anim.nav_default_enter_anim
@@ -44,6 +47,7 @@ class LoginFragment : Fragment(){
             }
 
         }
+
 
 
     }

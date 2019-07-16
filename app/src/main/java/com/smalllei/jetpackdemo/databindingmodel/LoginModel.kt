@@ -24,10 +24,21 @@ class LoginModel constructor(name: String, password: String, context: Context) {
 
     fun onNameChanged(s: CharSequence) {
         mName.set(s.toString())
+        Toast.makeText(
+                mContext,
+                s.toString(),
+                Toast.LENGTH_SHORT
+        ).show()
     }
 
     fun onPwdChanged(s: CharSequence) {
         mPwd.set(s.toString())
+        Toast.makeText(
+                mContext,
+                s.toString(),
+                Toast.LENGTH_SHORT
+        ).show()
+
     }
 
     fun login() {
