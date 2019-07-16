@@ -23,7 +23,6 @@ class SettingsFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        setHasOptionsMenu(true)
         return inflater.inflate(R.layout.settings_fragment,container,false)
     }
 

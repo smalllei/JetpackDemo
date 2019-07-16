@@ -28,7 +28,6 @@ class NewsFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        setHasOptionsMenu(true)
         return inflater.inflate(R.layout.news_fragment,container,false)
     }
 
@@ -36,7 +35,7 @@ class NewsFragment : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<TextView>(R.id.news_tv_name).setOnClickListener {
-
+               findNavController().navigate(R.id.about_us_fragment)
         }
     }
 

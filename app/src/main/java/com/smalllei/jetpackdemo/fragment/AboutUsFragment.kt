@@ -1,7 +1,9 @@
 package com.smalllei.jetpackdemo.fragment
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -16,14 +18,14 @@ import com.smalllei.jetpackdemo.R
  * @description:
  * @change:
  */
-class HomeFragment : Fragment(){
+class AboutUsFragment : Fragment(){
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        setHasOptionsMenu(false)
-        return inflater.inflate(R.layout.home_fragment,container,false)
+        setHasOptionsMenu(true)
+        return inflater.inflate(R.layout.about_us_fragment,container,false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,18 +39,10 @@ class HomeFragment : Fragment(){
             }
 
         }
-        view.findViewById<TextView>(R.id.home_tv_name).setOnClickListener {
-            val args=Bundle()
-            args.putString("from","HomeFragment")
-            findNavController().navigate(R.id.next_action,args,option)
+        view?.findViewById<TextView>(R.id.about_us_tv_name).setOnClickListener {
+
         }
     }
-
-
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.bottom_nav_menu,menu)
-    }
-
 
 
 

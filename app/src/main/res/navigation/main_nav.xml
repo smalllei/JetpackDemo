@@ -23,9 +23,7 @@
         android:name="com.smalllei.jetpackdemo.fragment.NewsFragment"
         android:label="@string/news"
         tools:layout="@layout/news_fragment">
-        <action
-            android:id="@+id/next_action"
-            app:destination="@+id/settings_fragment" />
+
     </fragment>
     <fragment
         android:id="@+id/settings_fragment"
@@ -38,5 +36,15 @@
         <deepLink
             android:autoVerify="true"
             app:uri="jetpackdemo://fragment/SettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/about_us_fragment"
+        android:name="com.smalllei.jetpackdemo.fragment.AboutUsFragment"
+        android:label="@string/about_us"
+        tools:layout="@layout/about_us_fragment">
+
+        <deepLink
+            android:autoVerify="true"
+            app:uri="jetpackdemo://fragment/AboutUsFragment" />
     </fragment>
 </navigation>
